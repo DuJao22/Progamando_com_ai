@@ -113,7 +113,7 @@ export function Home() {
               transition={{ duration: 0.8 }}
               className="mb-16 mt-6"
             >
-              <Card className="w-full bg-black/40 border border-white/10 relative overflow-hidden backdrop-blur-sm rounded-3xl shadow-3xl">
+              <Card className="w-full bg-white border border-slate-100 relative overflow-hidden rounded-3xl shadow-2xl">
                 <Spotlight
                   className="-top-40 left-0 md:left-60 md:-top-20"
                 />
@@ -121,33 +121,33 @@ export function Home() {
                 <div className="flex flex-col-reverse md:flex-row h-full">
                   {/* Left content */}
                   <div className="flex-1 p-6 md:p-12 relative z-10 flex flex-col justify-center text-left">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs w-fit mb-4">
-                      <Sparkles size={12} className="text-yellow-500 animate-pulse" />
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 text-xs w-fit mb-4">
+                      <Sparkles size={12} className="text-indigo-500 animate-pulse" />
                       <span>Jornada do Programador IA</span>
                     </div>
                     
-                    <h1 className="text-3xl md:text-5xl font-black tracking-tight text-white leading-tight">
+                    <h1 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 leading-tight">
                       Crie Sistemas Reais <br className="hidden lg:block" />
-                      <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                      <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                         Com Poder da IA
                       </span>
                     </h1>
                     
-                    <p className="mt-4 text-sm md:text-base text-slate-400 max-w-md">
+                    <p className="mt-4 text-sm md:text-base text-slate-600 max-w-md">
                       Aprenda a estruturar códigos do absoluto zero e publique landing pages cinematográficas e Mini SaaS com o poder da inteligência artificial.
                     </p>
                     
                     <div className="mt-8 flex flex-col sm:flex-row gap-4">
                       <button 
                         onClick={() => navigate('/editor')}
-                        className="px-6 py-3.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm tracking-wide transition-all shadow-[0_0_30px_-5px_rgba(79,70,229,0.5)] flex items-center justify-center gap-2 cursor-pointer"
+                        className="px-6 py-3.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm tracking-wide transition-all shadow-[0_0_35px_-5px_rgba(79,70,229,0.3)] flex items-center justify-center gap-2 cursor-pointer"
                       >
                         <Code size={16} />
                         Abrir Mini Editor
                       </button>
                       <a 
                         href="#lp"
-                        className="px-6 py-3.5 rounded-full bg-white/5 hover:bg-white/10 text-white font-semibold text-sm tracking-wide transition-all border border-white/15 flex items-center justify-center gap-2"
+                        className="px-6 py-3.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm tracking-wide transition-all border border-slate-200/80 flex items-center justify-center gap-2"
                       >
                         Começar onboarding
                         <ArrowRight size={16} />
@@ -156,8 +156,8 @@ export function Home() {
                   </div>
 
                   {/* Right content - Spline 3D Scene */}
-                  <div className="flex-1 min-h-[300px] md:min-h-[480px] relative overflow-hidden flex items-center justify-center">
-                    <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#050510] to-transparent pointer-events-none z-10 block md:hidden"></div>
+                  <div className="flex-1 min-h-[300px] md:min-h-[480px] relative overflow-hidden flex items-center justify-center bg-transparent">
+                    <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent pointer-events-none z-10 block md:hidden"></div>
                     <SplineScene 
                       scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
                       className="w-full h-full scale-100 touch-none pointer-events-auto"
