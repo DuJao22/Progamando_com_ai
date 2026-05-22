@@ -1,0 +1,13 @@
+# Render Blueprint Spec (https://render.com/docs/blueprints)
+services:
+  # Static Site Deployment (Recommended & completely free for Single Page Applications)
+  - type: web
+    name: jornada-programador-ia
+    env: static
+    buildCommand: npm run build
+    publishPath: dist
+    routes:
+      # Redirect fallback for single page application client-side routing (React Router)
+      - type: rewrite
+        source: /*
+        destination: /index.html
