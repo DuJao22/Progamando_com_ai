@@ -88,14 +88,14 @@ export function Home() {
               <div key={step.id} className="flex items-center gap-2 flex-shrink-0">
                 <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
                   active ? 'bg-indigo-500/20 text-indigo-400 border border-indigo-500/30' : 
-                  completed ? 'text-emerald-400' : 
-                  'text-slate-600'
+                  completed ? 'text-emerald-400 font-semibold' : 
+                  'text-slate-400/90 hover:text-white'
                 }`}>
                   {completed ? <Check size={16} /> : <StepIcon size={16} />}
                   <span>{step.label}</span>
                 </div>
                 {index < steps.length - 1 && (
-                  <ChevronRight size={16} className={completed ? 'text-emerald-500/50' : 'text-slate-800'} />
+                  <ChevronRight size={16} className={completed ? 'text-emerald-500/50' : 'text-slate-700'} />
                 )}
               </div>
             );
@@ -113,7 +113,7 @@ export function Home() {
               transition={{ duration: 0.8 }}
               className="mb-16 mt-6"
             >
-              <Card className="w-full bg-white border border-slate-100 relative overflow-hidden rounded-3xl shadow-2xl">
+              <Card className="w-full bg-[#0D0D18] border border-white/10 relative overflow-hidden rounded-3xl shadow-2xl">
                 <Spotlight
                   className="-top-40 left-0 md:left-60 md:-top-20"
                 />
@@ -121,19 +121,19 @@ export function Home() {
                 <div className="flex flex-col-reverse md:flex-row h-full">
                   {/* Left content */}
                   <div className="flex-1 p-6 md:p-12 relative z-10 flex flex-col justify-center text-left">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 text-xs w-fit mb-4">
-                      <Sparkles size={12} className="text-indigo-500 animate-pulse" />
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs w-fit mb-4">
+                      <Sparkles size={12} className="text-indigo-400 animate-pulse" />
                       <span>Jornada do Programador IA</span>
                     </div>
                     
-                    <h1 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 leading-tight">
+                    <h1 className="text-3xl md:text-5xl font-black tracking-tight text-white leading-tight">
                       Crie Sistemas Reais <br className="hidden lg:block" />
-                      <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                      <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                         Com Poder da IA
                       </span>
                     </h1>
                     
-                    <p className="mt-4 text-sm md:text-base text-slate-600 max-w-md">
+                    <p className="mt-4 text-sm md:text-base text-slate-300 max-w-md font-medium">
                       Aprenda a estruturar códigos do absoluto zero e publique landing pages cinematográficas e Mini SaaS com o poder da inteligência artificial.
                     </p>
                     
@@ -147,7 +147,7 @@ export function Home() {
                       </button>
                       <a 
                         href="#lp"
-                        className="px-6 py-3.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm tracking-wide transition-all border border-slate-200/80 flex items-center justify-center gap-2"
+                        className="px-6 py-3.5 rounded-full bg-white/5 hover:bg-white/10 text-white font-semibold text-sm tracking-wide transition-all border border-white/10 flex items-center justify-center gap-2"
                       >
                         Começar onboarding
                         <ArrowRight size={16} />
@@ -157,7 +157,7 @@ export function Home() {
 
                   {/* Right content - Spline 3D Scene */}
                   <div className="flex-1 min-h-[300px] md:min-h-[480px] relative overflow-hidden flex items-center justify-center bg-transparent">
-                    <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent pointer-events-none z-10 block md:hidden"></div>
+                    <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0D0D18] to-transparent pointer-events-none z-10 block md:hidden"></div>
                     <SplineScene 
                       scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
                       className="w-full h-full scale-100 touch-none pointer-events-auto"
@@ -230,27 +230,27 @@ export function Home() {
                   <div className="space-y-4">
                     <div className="flex gap-4">
                       <div className="font-mono text-indigo-400 font-bold w-16">&lt;html&gt;</div>
-                      <div className="flex-1 text-sm text-slate-400">Estrutura principal. Tudo fica dentro dela.</div>
+                      <div className="flex-1 text-sm text-slate-300">Estrutura principal. Tudo fica dentro dela.</div>
                     </div>
                     <div className="flex gap-4">
                       <div className="font-mono text-indigo-400 font-bold w-16">&lt;head&gt;</div>
-                      <div className="flex-1 text-sm text-slate-400">Configurações da página.</div>
+                      <div className="flex-1 text-sm text-slate-300">Configurações da página.</div>
                     </div>
                     <div className="flex gap-4">
                       <div className="font-mono text-indigo-400 font-bold w-16">&lt;title&gt;</div>
-                      <div className="flex-1 text-sm text-slate-400">Nome que aparece na aba do navegador.</div>
+                      <div className="flex-1 text-sm text-slate-300">Nome que aparece na aba do navegador.</div>
                     </div>
                     <div className="flex gap-4">
                       <div className="font-mono text-indigo-400 font-bold w-16">&lt;body&gt;</div>
-                      <div className="flex-1 text-sm text-slate-400">Área com o conteúdo visível.</div>
+                      <div className="flex-1 text-sm text-slate-300">Área com o conteúdo visível.</div>
                     </div>
                     <div className="flex gap-4">
                       <div className="font-mono text-emerald-400 font-bold w-16">&lt;h1&gt;</div>
-                      <div className="flex-1 text-sm text-slate-400">Título principal da página.</div>
+                      <div className="flex-1 text-sm text-slate-300">Título principal da página.</div>
                     </div>
                     <div className="flex gap-4">
                       <div className="font-mono text-emerald-400 font-bold w-16">&lt;p&gt;</div>
-                      <div className="flex-1 text-sm text-slate-400">Parágrafo de texto normal.</div>
+                      <div className="flex-1 text-sm text-slate-300">Parágrafo de texto normal.</div>
                     </div>
                   </div>
                 </div>
@@ -339,42 +339,42 @@ export function Home() {
                     </div>
                   </div>
 
-                  <div className="p-8 rounded-2xl bg-white/5 border border-white/10 shadow-xl flex flex-col justify-center">
+          <div className="p-8 rounded-2xl bg-white/5 border border-white/10 shadow-xl flex flex-col justify-center">
                     <h3 className="text-2xl font-bold text-white mb-6">Explicando o CSS</h3>
                     <div className="space-y-6">
                       <div>
                         <div className="font-mono text-cyan-400 font-bold mb-1">background</div>
-                        <div className="text-sm text-slate-400">Muda a cor de fundo da página.</div>
+                        <div className="text-sm text-slate-300">Muda a cor de fundo da página.</div>
                       </div>
                       <div className="h-px bg-white/5 w-full"></div>
                       <div>
                         <div className="font-mono text-cyan-400 font-bold mb-1">color</div>
-                        <div className="text-sm text-slate-400">Muda a cor do texto.</div>
+                        <div className="text-sm text-slate-300">Muda a cor do texto.</div>
                       </div>
                       <div className="h-px bg-white/5 w-full"></div>
                       <div>
                         <div className="font-mono text-cyan-400 font-bold mb-1">font-size</div>
-                        <div className="text-sm text-slate-400">Muda o tamanho do texto.</div>
+                        <div className="text-sm text-slate-300">Muda o tamanho do texto.</div>
                       </div>
                       <div className="h-px bg-white/5 w-full"></div>
                       <div>
                         <div className="font-mono text-cyan-400 font-bold mb-1">font-family</div>
-                        <div className="text-sm text-slate-400">Muda a fonte do texto.</div>
+                        <div className="text-sm text-slate-300">Muda a fonte do texto.</div>
                       </div>
                       <div className="h-px bg-white/5 w-full"></div>
                       <div>
                         <div className="font-mono text-cyan-400 font-bold mb-1">text-align</div>
-                        <div className="text-sm text-slate-400">Alinha o texto.</div>
+                        <div className="text-sm text-slate-300">Alinha o texto.</div>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Resultado Final Explain */}
-                <div className="p-8 rounded-2xl bg-[#0D0D18] border border-white/5 mt-4">
+          <div className="p-8 rounded-2xl bg-[#0D0D18] border border-white/5 mt-4">
                   <h3 className="text-xl font-bold text-white mb-4">O Resultado Final</h3>
-                  <p className="text-slate-400 mb-6">Agora seu site já possui a estrutura com <strong>HTML</strong> e o estilo visual com <strong>CSS</strong>.</p>
-                  <p className="text-slate-400 mb-6">Essa é a base usada para criar:</p>
+                  <p className="text-slate-300 mb-6">Agora seu site já possui a estrutura com <strong>HTML</strong> e o estilo visual com <strong>CSS</strong>.</p>
+                  <p className="text-slate-300 mb-6">Essa é a base usada para criar:</p>
                   <div className="flex flex-wrap gap-4">
                     {['Landing pages', 'Sites modernos', 'Interfaces profissionais', 'Páginas animadas', 'Dashboards', 'Sistemas web'].map((item, index) => (
                       <span key={index} className="flex items-center gap-2 text-sm text-slate-300 bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
@@ -427,12 +427,12 @@ export function Home() {
                   { title: 'Deploy', desc: 'Ativar GitHub Pages', icon: Globe },
                 ].map((step, i) => (
                   <div key={i} className="p-5 rounded-2xl bg-[#0D0D18] border border-white/5 relative">
-                    <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-xs font-bold text-slate-400">
+                    <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-xs font-bold text-slate-300">
                       {i + 1}
                     </div>
-                    <step.icon size={24} className="text-slate-500 mb-3" />
+                    <step.icon size={24} className="text-slate-400 mb-3" />
                     <h3 className="text-white font-medium mb-1">{step.title}</h3>
-                    <p className="text-sm text-slate-500">{step.desc}</p>
+                    <p className="text-sm text-slate-400">{step.desc}</p>
                   </div>
                 ))}
               </div>
@@ -551,7 +551,7 @@ export function Home() {
               ].map((item, i) => (
                 <div key={i} className="p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
                   <h3 className="text-white font-medium mb-2">{item.title}</h3>
-                  <p className="text-slate-500 text-sm">{item.desc}</p>
+                  <p className="text-slate-400 text-sm">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -662,7 +662,7 @@ export function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 w-full">
             <div className="flex flex-col items-center gap-2">
               <span className="font-bold text-white text-lg">João Layon</span>
-              <span className="text-xs text-slate-500">Desenvolvedor Fullstack & CEO</span>
+              <span className="text-xs text-slate-400 font-medium">Desenvolvedor Fullstack & CEO</span>
               <a href="https://instagram.com/layon.dev" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300 text-sm flex items-center gap-1.5 transition-colors mt-1">
                 <Instagram size={16} /> @layon.dev
               </a>
@@ -670,7 +670,7 @@ export function Home() {
             
             <div className="flex flex-col items-center gap-2">
               <span className="font-bold text-white text-lg">Paulo Davi</span>
-              <span className="text-xs text-slate-500">Co-fundador / Parceiro</span>
+              <span className="text-xs text-slate-400 font-medium">Co-fundador / Parceiro</span>
               <a href="https://instagram.com/davi._link" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300 text-sm flex items-center gap-1.5 transition-colors mt-1">
                 <Instagram size={16} /> @davi._link
               </a>
@@ -678,7 +678,7 @@ export function Home() {
             
             <div className="flex flex-col items-center gap-2">
               <span className="font-bold text-white text-lg">Luiz Henrique</span>
-              <span className="text-xs text-slate-500">Co-fundador / Parceiro</span>
+              <span className="text-xs text-slate-400 font-medium">Co-fundador / Parceiro</span>
               <a href="https://instagram.com/web.lz_" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300 text-sm flex items-center gap-1.5 transition-colors mt-1">
                 <Instagram size={16} /> @web.lz_
               </a>
@@ -686,7 +686,7 @@ export function Home() {
             
             <div className="flex flex-col items-center gap-2">
               <span className="font-bold text-white border-b-2 border-indigo-500/50 pb-1 text-lg">DS Company</span>
-              <span className="text-xs text-slate-500">Agência / Empresa</span>
+              <span className="text-xs text-slate-400 font-medium">Agência / Empresa</span>
               <a href="https://instagram.com/dscompany1_" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 text-sm flex items-center gap-1.5 transition-colors mt-1">
                 <Instagram size={16} /> @dscompany1_
               </a>
